@@ -1,14 +1,44 @@
-class Car {
+class Vehicules {
+  _brand;
+  _model;
+  _year;
+  constructor(brand, model, year) {
+    this._brand = brand;
+    this._model = model;
+    this._year = year;
+  }
+
+  getBrand() {
+    return this._brand;
+  }
+
+  setBrand(value) {
+    this._brand = value;
+  }
+
+  getModel() {
+    return this._model;
+  }
+
+  setModel(value) {
+    this._model = value;
+  }
+
+  getYear() {
+    return this._year;
+  }
+
+  setYear(value) {
+    this._year = value;
+  }
+}
+
+class Car extends Vehicules {
   #color;
-  #brand;
-  #model;
-  #year;
 
   constructor(brand, model, year, color) {
+    super(brand, model, year);
     this.#color = color;
-    this.#brand = brand;
-    this.#model = model;
-    this.#year = year;
   }
 
   getColor() {
@@ -19,34 +49,10 @@ class Car {
     this.#color = value;
   }
 
-  getBrand() {
-    return this.#brand;
-  }
-
-  setBrand(value) {
-    this.#brand = value;
-  }
-
-  getModel() {
-    return this.#model;
-  }
-
-  setModel(value) {
-    this.#model = value;
-  }
-
-  getYear() {
-    return this.#year;
-  }
-
-  setYear(value) {
-    this.#year = value;
-  }
-
   showDetails() {
-    console.log(this.#brand);
-    console.log(this.#model);
-    console.log(this.#year);
+    console.log(this._brand);
+    console.log(this._model);
+    console.log(this._year);
     console.log(this.#color);
   }
 }
