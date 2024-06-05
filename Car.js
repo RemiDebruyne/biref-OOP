@@ -57,7 +57,7 @@ class Car extends Vehicules {
   }
 }
 
-let myCar = new Car("Toyota", "Yaris", "2005", "Rouge");
+const myCar = new Car("Toyota", "Yaris", "2005", "Rouge");
 
 myCar.showDetails();
 

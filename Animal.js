@@ -3,7 +3,7 @@ class Animal {
 }
 
 class Dog extends Animal {
-  //super.makeNoise() not used because parent method doesn't have a behaviour
+  // super.makeNoise() not used because parent method doesn't have a behaviour
   makeNoise() {
     return "wouaf";
   }
@@ -15,9 +15,9 @@ class Cat extends Animal {
   }
 }
 
-let dog = new Dog();
+const dog = new Dog();
 
-let cat = new Cat();
+const cat = new Cat();
 
 console.log(dog.makeNoise());
 console.log(cat.makeNoise());
